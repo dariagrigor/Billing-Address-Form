@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing and Delivery Address Form</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="billing.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="inputBox">
+                        <span>First Name:</span>
+                        <input required type="text" id="billingFirstName" placeholder="John">
+                    </div>
+                    <div class="inputBox">
+                        <span>Last Name:</span>
+                        <input required type="text" id="billingLastName" placeholder="Doe">
+                    </div>
+                    <div class="inputBox">
+                        <span>Street Address:</span>
+                        <input required type="text" id="billingStreet" placeholder="1 Main Street">
+                    </div>
+                    <div class="inputBox">
+                        <span>City:</span>
+                        <input required type="text" id="billingCity" placeholder="Toronto">
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <label for="billingProvince">Province/Territory:</label>
+                            <select required id="billingProvince" name="billingProvince">
+                                <option value="AB">AB</option>
+                                <option value="BC">BC</option>
+                                <option value="MB">MN</option>
+                                <option value="NB">NB</option>
+                                <option value="NL">NL</option>
+                                <option value="NS">NS</option>
+                                <option value="ON">ON</option>
+                                <option value="PEI">PEI</option>
+                                <option value="QC">QB</option>
+                                <option value="SK">SK</option>
+                                <option value="NT">NT</option>
+                                <option value="NU">NU</option>
+                                <option value="YT">YT</option>
+                            </select>
+                        </div>
+                        <div class="inputBox">
+                            <span>Postal Code:</span>
+                            <input required type="text" id="billingPostalCode" placeholder="M1C 9K7">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3 class="title">Delivery Address</h3>
+                    <input type="checkbox" id="sameAsBilling" onchange="copyData()">
+                    <label for="sameAsBilling">Same as Billing Address</label>
+                    <div class="inputBox">
+                        <span>First Name:</span>
+                        <input required type="text" id="deliveryFirstName" placeholder="John">
+                    </div>
+                    <div class="inputBox">
+                        <span>Last Name:</span>
+                        <input required type="text" id="deliveryLastName" placeholder="Doe">
+                    </div>
+                    <div class="inputBox">
+                        <span>Street Address:</span>
+                        <input required type="text" id="deliveryStreet" placeholder="1 Main Street">
+                    </div>
+                    <div class="inputBox">
+                        <span>City:</span>
+                        <input required type="text" id="deliveryCity" placeholder="Toronto">
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <label for="billingProvince">Province/Territory:</label>
+                            <select required id="deliveryProvince" name="deliveryProvince">
+                                <option value="AB">AB</option>
+                                <option value="BC">BC</option>
+                                <option value="MB">MN</option>
+                                <option value="NB">NB</option>
+                                <option value="NL">NL</option>
+                                <option value="NS">NS</option>
+                                <option value="ON">ON</option>
+                                <option value="PEI">PEI</option>
+                                <option value="QC">QB</option>
+                                <option value="SK">SK</option>
+                                <option value="NT">NT</option>
+                                <option value="NU">NU</option>
+                                <option value="YT">YT</option>
+                            </select>
+                        </div>
+                        <div class="inputBox">
+                            <span>Postal Code:</span>
+                            <input required type="text" id="deliveryPostalCode" placeholder="M1C 9K7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Proceed to Checkout" class="submit-btn">
+        </form>
+    </div>    
+</body>
+</html>
